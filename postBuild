@@ -2,4 +2,4 @@
 set -e
 pip uninstall jupyter-rsession-proxy -y
 pip install git+https://github.com/juzdzema/jupyter-rsession-proxy.git@patch-1
-rm /home/jovyan/*
+rm -rf /home/jovyan/*
