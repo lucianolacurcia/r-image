@@ -1,3 +1,4 @@
+ibudunits2-dev
 dvipng
 ghostscript
 texlive-fonts-recommended
