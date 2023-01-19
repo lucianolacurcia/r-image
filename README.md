@@ -26,3 +26,11 @@ singleuser:
       image: "lucianolacurcia/jupyterhub-rstudio:94d4b1611e25"
       default_url: "/lab"
 ```
+
+
+### Bug al usar r-studio en openshift:
+Hay un bug al usar rstudio-session-proxy en openshift que genera que no se pueda acceder al servidor por un url mal formado. Para solucionar esto, se debe instalar una version modificada de rstudio-session-proxy en el entorno que queremos crear.
+
+Para esto, usamos el archivo `postBuild` el cual contiene un script que se ejecuta al finalizar el build de la imagen. En este archivo podemos reinstalar `rstudio-session-proxy`  pero esta vez usando la versión modificada. No olvidarse de esto si se hacen builds de imagenes ya que no van a funcionar en openshift.
+
+
